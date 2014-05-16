@@ -1,0 +1,53 @@
+body {
+    background: transparent url('images/phpreport-footer-background.png') repeat-x 0 bottom;
+}
+
+#header {
+    background: transparent url('images/phpreport-header-background.png') repeat-x;
+    height: 70px;
+}
+
+#header img {
+    float: left;
+}
+
+#menubar {
+    padding-top: 45px;
+}
+
+#menubar .x-toolbar {
+    background-color: transparent;
+    background-image: none;
+    border: 0px;
+}
+
+.auxiliarpanel {
+    float: left;
+    clear: left;
+    padding: 5px;
+}
+
+#content {
+    float: both;
+    margin: 5px;
+}
+
+#footer {
+    clear: both;
+}
+
+.started-task {
+    background: yellow;
+}
+
+.not-started-task {
+    background: #FE454B;
+}
+
+.finished-task {
+    background: #80FF00;
+}
+
+#moreactions .x-toolbar {
+    border-width: 1px;
+}

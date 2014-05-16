@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<title>Users management</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7434 2012-05-11 21:06:27Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { /* line numbers */
+  color: grey;
+}
+
+.code {
+  background-color: #eeeeee
+}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="users-management">
+<h1 class="title">Users management</h1>
+
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#create-edit-and-delete-users" id="id1">Create, edit and delete users</a></li>
+<li><a class="reference internal" href="#setting-the-hour-cost-for-a-user" id="id2">Setting the hour cost for a user</a></li>
+<li><a class="reference internal" href="#setting-the-journey-for-a-user" id="id3">Setting the journey for a user</a></li>
+<li><a class="reference internal" href="#setting-the-area-for-a-user" id="id4">Setting the area for a user</a></li>
+<li><a class="reference internal" href="#setting-the-city-for-a-user" id="id5">Setting the city for a user</a></li>
+</ul>
+</div>
+<p>PhpReport provides an interface to create, edit and remove users, and assign
+their hour cost, journey, area membership and city residence data.
+It can be accessed from the <em>Data management</em> menu, section <em>Users</em>.</p>
+<div class="figure">
+<img alt="i/menu-data-mgmt-users.png" src="i/menu-data-mgmt-users.png" />
+</div>
+<div class="section" id="create-edit-and-delete-users">
+<h1><a class="toc-backref" href="#id1">Create, edit and delete users</a></h1>
+<p>In the <em>Users management</em> screen you will see a grid containing all the
+users, sorted by <em>login</em> by default; this can be changed pressing on
+the corresponding column.</p>
+<div class="figure">
+<img alt="i/users-mgmt-screen.png" src="i/users-mgmt-screen.png" />
+</div>
+<p>To create a new user you must use the <em>Add</em> button located above the grid,
+and to edit an existing user you must double-click on the corresponding row.</p>
+<p>In both cases, the following inline edition row will appear:</p>
+<div class="figure">
+<img alt="i/user-inline-editor.png" src="i/user-inline-editor.png" />
+</div>
+<p>In the row you must enter the data of the user:</p>
+<dl class="docutils">
+<dt>Login:</dt>
+<dd>User name, to be used in the login screen and to appear in the reports.</dd>
+<dt>Password:</dt>
+<dd>Password to be used in the login screen.</dd>
+<dt>Staff:</dt>
+<dd>Belonging to the staff group. Activating it the user will be able to login,
+fill tasks in, check reports, etc.</dd>
+<dt>Admin:</dt>
+<dd>Belonging to the administrators group. Activating it the user will be able to
+use the screens under <em>Data management</em> section: manage projects, users, etc.</dd>
+</dl>
+<div class="tip">
+<p class="first admonition-title">Tip</p>
+<p class="last">If LDAP authentication is set, you won't be able to edit these user
+data. Besides, columns <em>Staff</em> and <em>Admin</em> may not appear, and the
+names of the groups in the LDAP server would appear instead.</p>
+</div>
+<p>To delete an user you must select it with a single click on the corresponding
+row and use the <em>Delete</em> button located next to <em>Add</em> button.
+You will be asked for confirmation before actually
+trying to delete. If the user is assigned to some project, or he has already
+entered some tasks, you won't be allowed to delete it. You have to remove the
+existing assignations or tasks and try the deletion later.</p>
+</div>
+<div class="section" id="setting-the-hour-cost-for-a-user">
+<h1><a class="toc-backref" href="#id2">Setting the hour cost for a user</a></h1>
+<p>The hour cost for a user will be used to calculate the <em>Total cost</em> for a
+project, taking into account the time every user has contributed to that project.
+The total cost of a project can be checked in the <em>Project evaluation</em> report.</p>
+<p>Hour cost may vary with time, so you will have to enter an <em>Init date</em> and
+<em>End date</em> for every value of hour cost in PhpReport. You can do it in the
+<em>Users management</em> screen, selecting one user (doing a single click on a row)
+and expanding the panel named <em>User Histories</em> located below the users grid. The
+first tab in this panel corresponds to <em>Hour Cost</em>:</p>
+<div class="figure">
+<img alt="i/users-mgmt-hour-cost.png" src="i/users-mgmt-hour-cost.png" />
+</div>
+<p>As you can see, every row has three values: <em>Init date</em>, <em>End date</em> and <em>Hour
+Cost</em>.
+To create a new row, you must use the <em>Add</em> button, and to edit a row you must
+double click on it. In both cases an inline edition row will appear and you will
+be able to enter the three values. Once you have entered them you can <em>Accept</em>
+to save the changes. To delete a row you must select it with a single click and
+use the <em>Delete</em> button.</p>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Overlapping time periods among different rows are not allowed.</p>
+</div>
+</div>
+<div class="section" id="setting-the-journey-for-a-user">
+<h1><a class="toc-backref" href="#id3">Setting the journey for a user</a></h1>
+<p>The journey is the number of hours the person is supposed to work for every
+working day. Working days in PhpReport are Monday to Friday. This value will be
+used to calculate the balance of <em>Extra hours</em> for a user, as well as the
+corresponding amount of <em>Holiday hours</em>. These values can be checked in the
+<a class="reference external" href="reports.html#accumulated-hours">Accumulated hours</a> report.</p>
+<p>This value may vary with time (e.g. a user may change from full time to part-time
+dedication for a specific period of time), so you will have to enter an <em>Init date</em> and
+<em>End date</em> for every value of user journey in PhpReport. You can do it in the
+<em>Users management</em> screen, selecting one user (doing a single click on a row)
+and expanding the panel named <em>User Histories</em> located below the users grid.
+The second tab in this panel is <em>Journey</em>:</p>
+<div class="figure">
+<img alt="i/users-mgmt-journey.png" src="i/users-mgmt-journey.png" />
+</div>
+<p>As you can see, every row has three values: <em>Init date</em>, <em>End date</em> and <em>Journey</em>.
+To create a new row, you must use the <em>Add</em> button, and to edit a row you must
+double click on it. In both cases an inline edition row will appear and you will
+be able to enter the three values. Once you have entered them you can <em>Accept</em>
+to save the changes. To delete a row you must select it with a single click and
+use the <em>Delete</em> button.</p>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Overlapping time periods among different rows are not allowed.</p>
+</div>
+</div>
+<div class="section" id="setting-the-area-for-a-user">
+<h1><a class="toc-backref" href="#id4">Setting the area for a user</a></h1>
+<p>Areas are the way to translate a department structure to PhpReport; you can
+assign a user to an area for a defined period of time.
+Like in the previous values, you will have to enter an <em>Init date</em> and
+<em>End date</em> for every value of user area in PhpReport. You can do it in the
+<em>Users management</em> screen, selecting one user (doing a single click on a row)
+and expanding the panel named <em>User Histories</em> located below the users grid.
+The second tab in this panel is <em>Area</em>:</p>
+<div class="figure">
+<img alt="i/users-mgmt-area.png" src="i/users-mgmt-area.png" />
+</div>
+<p>As you can see, every row has three values: <em>Init date</em>, <em>End date</em> and <em>Area</em>.
+To create a new row, you must use the <em>Add</em> button, and to edit a row you must
+double click on it. In both cases an inline edition row will appear and you will
+be able to enter the three values. Once you have entered them you can <em>Accept</em>
+to save the changes. To delete a row you must select it with a single click and
+use the <em>Delete</em> button.</p>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Overlapping time periods among different rows are not allowed.</p>
+</div>
+</div>
+<div class="section" id="setting-the-city-for-a-user">
+<h1><a class="toc-backref" href="#id5">Setting the city for a user</a></h1>
+<p>Finally, users may be assigned to a city. The city has influence in the working
+days of users, because they translate the public holidays of every city to user
+hours accountability. Public holidays work like weekends: users are not supposed
+to work in those days, and when they do, the hours are accounted as extra hours.</p>
+<p>This value may vary with time (e.g. a user moving to a work center located in
+a different city), so you will have to enter an <em>Init date</em> and
+<em>End date</em> for every value of user city in PhpReport. You can do it in the
+<em>Users management</em> screen, selecting one user (doing a single click on a row)
+and expanding the panel named <em>User Histories</em> located below the users grid.
+The second tab in this panel is <em>City</em>:</p>
+<div class="figure">
+<img alt="i/users-mgmt-city.png" src="i/users-mgmt-city.png" />
+</div>
+<p>As you can see, every row has three values: <em>Init date</em>, <em>End date</em> and <em>City</em>.
+To create a new row, you must use the <em>Add</em> button, and to edit a row you must
+double click on it. In both cases an inline edition row will appear and you will
+be able to enter the three values. Once you have entered them you can <em>Accept</em>
+to save the changes. To delete a row you must select it with a single click and
+use the <em>Delete</em> button.</p>
+<div class="warning">
+<p class="first admonition-title">Warning</p>
+<p class="last">Overlapping time periods among different rows are not allowed.</p>
+</div>
+<p class="credits">This file is part of PhpReport 2.1 documentation.
+Generated on mié feb 27 17:45:01 CET 2013</p>
+</div>
+</div>
+</body>
+</html>

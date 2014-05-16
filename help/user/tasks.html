@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<title>Tasks management</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7434 2012-05-11 21:06:27Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { /* line numbers */
+  color: grey;
+}
+
+.code {
+  background-color: #eeeeee
+}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="tasks-management">
+<h1 class="title">Tasks management</h1>
+
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#the-tasks-management-screen" id="id1">The tasks management screen</a></li>
+<li><a class="reference internal" href="#managing-tasks" id="id2">Managing tasks</a></li>
+<li><a class="reference internal" href="#using-templates" id="id3">Using templates</a></li>
+<li><a class="reference internal" href="#copying-tasks-from-another-date" id="id4">Copying tasks from another date</a></li>
+<li><a class="reference internal" href="#blocked-tasks" id="id5">Blocked tasks</a></li>
+<li><a class="reference internal" href="#hotkeys" id="id6">Hotkeys</a></li>
+</ul>
+</div>
+<p>The first option in PhpReport top menu points to the task management screen. In
+this screens users will be able to fill in their tasks, modify or delete them.</p>
+<div class="figure">
+<img alt="i/tasks-menu.png" src="i/tasks-menu.png" />
+</div>
+<div class="section" id="the-tasks-management-screen">
+<h1><a class="toc-backref" href="#id1">The tasks management screen</a></h1>
+<div class="figure">
+<img alt="i/tasks-screen.png" src="i/tasks-screen.png" />
+</div>
+<p>In the left column, you can find:</p>
+<ul class="simple">
+<li>User work summary: counts the number of hours worked in the selected day, week
+and month.</li>
+<li>Calendar: indicates the selected date and you can click on it to go to a
+different date.</li>
+<li>Copy tasks: copies the tasks from one date to the currently selected date.</li>
+<li>Actions: create new task and save changes, expand and collapse all the panels,
+and use templates.</li>
+</ul>
+<p>In the central area, you will see the tasks stored in the currently selected
+date, one panel per task. All panels have the same components:</p>
+<ul class="simple">
+<li>Time: fill the start and end dates in.</li>
+<li>Customer: customer financing the task. Selecting one customer will filter the
+projects in the next box to see only those belonging to the customer.</li>
+<li>Project: project the task belongs to.</li>
+<li>Task type: select one of the types for additional info about the task.</li>
+<li>Story: you can fill this field with a keyword to help you to differentiate
+tasks with the same customer and project.</li>
+<li>TaskStory: when using XP tracker for a project, this field is used to relate
+the task with a category inside an iteration.</li>
+<li>Telework: flag to differentiate telework tasks.</li>
+<li>Delete: delete the task. Remember to save to do the actual deletion.</li>
+<li>Clone: creates a new task with the same data and empty times.</li>
+<li>Template: create a template based on that task.</li>
+<li>Description: the big text area on the right can be used to write a description
+of the task.</li>
+<li>Collapse: the arrow icon in the top-right corner collapses the panel; it's
+useful to save vertical space when there are many tasks.</li>
+</ul>
+<p>Below the list of tasks in the central area, there are two more icons for <em>New
+task</em> and <em>Save changes</em>.</p>
+</div>
+<div class="section" id="managing-tasks">
+<h1><a class="toc-backref" href="#id2">Managing tasks</a></h1>
+<p>When you open the screen, the current day will be selected; if you are about to
+fill tasks for a different date select it from the calendar on the left. Be
+careful, if there are unsaved changes, they will be lost when you select a
+different date.</p>
+<p>Create a new task with any of the two <em>New task</em> buttons and fill in its data.
+There are more ways to create new tasks: using the clone button in a different
+task, using a template button, or copying from another date.
+Repeat as many times as you want until you have filled all the tasks of the day,
+and don't forget to save once you're done using any of the two <em>Save</em> buttons.
+You can delete a task pressing the <em>Delete</em> button inside the task panel; the
+panel disappears but the deletion won't be saved until you do it manually with
+the <em>Save</em> button.</p>
+<p>Take care with the start and end times of the dates, because they can't overlap;
+if they do, tasks won't be saved until you correct the problem and save again.</p>
+</div>
+<div class="section" id="using-templates">
+<h1><a class="toc-backref" href="#id3">Using templates</a></h1>
+<p>Templates are useful when you create tasks with very similar data very often.
+They are listed in the <em>Templates</em> section, in the bottom of the left column.
+Creating a new task from a template is as easy as clicking in the button with
+the name of the template.</p>
+<p>To add new templates to this list, first you have to create a task; fill it in
+with your data, and write a name for the template in the description area. You
+don't have to fill the start and end times in because they won't be saved in the
+template. Once it's ready, press the <em>Template</em> button in the panel of the task,
+and it will be added to the list.</p>
+<p>To delete a template, you only have to press the <em>Delete</em> button right to the
+button with template name in the list.</p>
+</div>
+<div class="section" id="copying-tasks-from-another-date">
+<h1><a class="toc-backref" href="#id4">Copying tasks from another date</a></h1>
+<p>A common scenario is having a person working in the same tasks for some days,
+usually with the same timetable. The copy feature is useful in this case.</p>
+<p>In the left column, right below the calendar, there's a panel with a date and
+the button 'Copy tasks from selected date'. When you press that button, the
+tasks saved in the indicated date will be copied to the current date. Take into
+account that copied tasks aren't saved until you press the save button.</p>
+<p>Notice that the default date to copy from is the day before the current date;
+that's the most common use case. Finally, mention that copied tasks can be
+modified without affecting to the original ones.</p>
+</div>
+<div class="section" id="blocked-tasks">
+<h1><a class="toc-backref" href="#id5">Blocked tasks</a></h1>
+<p>Sometimes users won't be able to modify or delete some saved tasks, nor even
+create new ones on certain dates. It can happen because of two reasons:</p>
+<ul class="simple">
+<li>Managers have closed a project. In that case, tasks assigned to that project
+cannot be altered.</li>
+<li>Managers have blocked tasks reports older than a certain date: a number of
+days can be set so any tasks older than that cannot be changed. In this case,
+even the <em>New task</em> and <em>Save changes</em> buttons would be blocked.</li>
+</ul>
+</div>
+<div class="section" id="hotkeys">
+<h1><a class="toc-backref" href="#id6">Hotkeys</a></h1>
+<p>Some hotkeys are available to increase the productivity for keyboard users:</p>
+<dl class="docutils">
+<dt>CTRL + S</dt>
+<dd>Save changes. Some browsers don't allow to overwrite the behaviour of this
+key combination (e.g. Epiphany), so you can use ALT + S instead.</dd>
+<dt>CTRL + N</dt>
+<dd>Create a new task. The cursor will be placed in the first field of the new
+task. Some browsers don't allow to overwrite the behaviour of this
+key combination (e.g. Chrome), so you can use ALT + N, CTRL + U or ALT + U
+instead.</dd>
+<dt>CTRL + number</dt>
+<dd>The cursor will be placed in the first field of the first, second, third, etc.
+task depending on the number you pressed.</dd>
+<dt>TAB</dt>
+<dd>Advance to the next field.</dd>
+<dt>SHIFT + TAB</dt>
+<dd>Go back to the previous field.</dd>
+</dl>
+<p class="credits">This file is part of PhpReport 2.1 documentation.
+Generated on mié feb 27 17:45:01 CET 2013</p>
+</div>
+</div>
+</body>
+</html>

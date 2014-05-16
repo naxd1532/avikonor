@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.10: http://docutils.sourceforge.net/" />
+<title>Installation instructions</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 7434 2012-05-11 21:06:27Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+object[type="image/svg+xml"], object[type="application/x-shockwave-flash"] {
+  overflow: hidden;
+}
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left, object.align-left {
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right, object.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+img.align-center, .figure.align-center, object.align-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: inherit }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block, pre.math, pre.code {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+pre.code .ln { /* line numbers */
+  color: grey;
+}
+
+.code {
+  background-color: #eeeeee
+}
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+</head>
+<body>
+<div class="document" id="installation-instructions">
+<h1 class="title">Installation instructions</h1>
+
+<div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#step-0-dependencies" id="id1">Step 0: Dependencies</a><ul>
+<li><a class="reference internal" href="#installing-dependencies-in-windows-systems" id="id2">Installing dependencies in Windows systems</a></li>
+<li><a class="reference internal" href="#installing-dependencies-in-debian-ubuntu-systems" id="id3">Installing dependencies in Debian/Ubuntu systems</a></li>
+<li><a class="reference internal" href="#installing-dependencies-in-red-hat-fedora-systems" id="id4">Installing dependencies in Red Hat/Fedora systems</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#step-1-setting-up-the-database" id="id5">Step 1: Setting up the database</a></li>
+<li><a class="reference internal" href="#step-2-setting-up-the-files" id="id6">Step 2: Setting up the files</a></li>
+<li><a class="reference internal" href="#step-3-creating-the-schema-and-initial-data-of-the-database" id="id7">Step 3: Creating the schema and initial data of the database</a><ul>
+<li><a class="reference internal" href="#installation-wizard" id="id8">Installation wizard</a></li>
+<li><a class="reference internal" href="#manual-setup-of-schema-and-initial-data" id="id9">Manual setup of schema and initial data</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#step-4-try-the-application" id="id10">Step 4: Try the application</a></li>
+<li><a class="reference internal" href="#step-5-remove-dangerous-files" id="id11">Step 5: remove dangerous files</a></li>
+<li><a class="reference internal" href="#step-6-last-configuration-bits" id="id12">Step 6: last configuration bits</a></li>
+</ul>
+</div>
+<div class="section" id="step-0-dependencies">
+<h1><a class="toc-backref" href="#id1">Step 0: Dependencies</a></h1>
+<p>To install PhpReport in your system, you will need the following software:</p>
+<ul class="simple">
+<li>PostgreSQL database server (tested with PostgreSQL 9)</li>
+<li>PHP 5.3.0 or higher<ul>
+<li>Support for PostgreSQL</li>
+</ul>
+</li>
+<li>Web server (tested with Apache 2.2)<ul>
+<li>PHP module</li>
+</ul>
+</li>
+</ul>
+<div class="section" id="installing-dependencies-in-windows-systems">
+<h2><a class="toc-backref" href="#id2">Installing dependencies in Windows systems</a></h2>
+<p>You will have to download and install the software by yourself. Check each
+program documentation for detailed instructions.</p>
+<p>You can find Windows versions of the software in the following sites:</p>
+<ul class="simple">
+<li>PostgreSQL at <a class="reference external" href="http://www.postgresql.org/download/windows">http://www.postgresql.org/download/windows</a></li>
+<li>Apache 2.2 at <a class="reference external" href="http://www.apachelounge.com/download/">http://www.apachelounge.com/download/</a>. This is the recommended
+version you should install to use PHP 5.3. Follow instructions in ReadMe file.</li>
+<li>PHP 5.3 at <a class="reference external" href="http://windows.php.net/download/">http://windows.php.net/download/</a>. Installation instructions are
+available here: <a class="reference external" href="http://www.sitepoint.com/how-to-install-php-on-windows">http://www.sitepoint.com/how-to-install-php-on-windows</a>.</li>
+</ul>
+</div>
+<div class="section" id="installing-dependencies-in-debian-ubuntu-systems">
+<h2><a class="toc-backref" href="#id3">Installing dependencies in Debian/Ubuntu systems</a></h2>
+<p>Run the following command with root permission:</p>
+<pre class="literal-block">
+apt-get install postgresql apache2 php5 php5-pgsql
+</pre>
+</div>
+<div class="section" id="installing-dependencies-in-red-hat-fedora-systems">
+<h2><a class="toc-backref" href="#id4">Installing dependencies in Red Hat/Fedora systems</a></h2>
+<p>Run the following command with root permission:</p>
+<pre class="literal-block">
+yum install postgresql-server httpd php php-pgsql php-xml
+</pre>
+</div>
+</div>
+<div class="section" id="step-1-setting-up-the-database">
+<h1><a class="toc-backref" href="#id5">Step 1: Setting up the database</a></h1>
+<p>Connect to your database server as superuser, or a user with enough
+permissions to create databases and users.</p>
+<ul>
+<li><p class="first">On Windows: go to <em>Start Menu -&gt; Programs -&gt; PostgreSQL -&gt; SQL Shell</em>, connect
+as the user <tt class="docutils literal">postgres</tt>.</p>
+</li>
+<li><p class="first">On GNU/Linux systems: run the following command with root permissions:</p>
+<pre class="literal-block">
+su postgres -c psql
+</pre>
+</li>
+</ul>
+<p>Once you have logged into PostgreSQL shell, run the following commands
+to create a database, a user and grant enough permissions (change the
+names and passwords if you feel like to, but remember it in the next steps):</p>
+<pre class="literal-block">
+CREATE DATABASE phpreport;
+CREATE USER phpreport WITH PASSWORD 'phpreport';
+ALTER DATABASE phpreport OWNER TO phpreport;
+</pre>
+</div>
+<div class="section" id="step-2-setting-up-the-files">
+<h1><a class="toc-backref" href="#id6">Step 2: Setting up the files</a></h1>
+<p>Just move the program files to a location available for the web server, inside
+a directory called phpreport. Usual default locations for web servers are:</p>
+<ul class="simple">
+<li>On Windows: <tt class="docutils literal"><span class="pre">C:\Apache2\htdocs\</span></tt></li>
+<li>On Debian, Ubuntu: <tt class="docutils literal">/var/www/</tt></li>
+<li>On Red Hat, Fedora: <tt class="docutils literal">/var/www/html/</tt></li>
+</ul>
+</div>
+<div class="section" id="step-3-creating-the-schema-and-initial-data-of-the-database">
+<h1><a class="toc-backref" href="#id7">Step 3: Creating the schema and initial data of the database</a></h1>
+<p>You have two ways to do it: using the included
+<a class="reference external" href="#installation-wizard">web installation wizard</a> or
+<a class="reference external" href="#manual-setup-of-schema-and-initial-data">manually</a>.</p>
+<div class="section" id="installation-wizard">
+<h2><a class="toc-backref" href="#id8">Installation wizard</a></h2>
+<p>As a precondition, your web server has to have write permissions on the config
+directory of PhpReport to write the configuration file. Once that is done, open
+the url <tt class="docutils literal"><span class="pre">http://your-web-server/phpreport/install/index.php</span></tt>, and follow the
+on-screen
+instructions. If you didn't change the names and passwords specified on step 1,
+defaults will just work fine.</p>
+</div>
+<div class="section" id="manual-setup-of-schema-and-initial-data">
+<h2><a class="toc-backref" href="#id9">Manual setup of schema and initial data</a></h2>
+<p>Follow these steps only if you haven't used the installation wizard. Firstly,
+create the configuration file with the default options with the command:</p>
+<pre class="literal-block">
+cp config/config.defaults config/config.php
+</pre>
+<p>If you changed any of data on the first step, edit the file <tt class="docutils literal">config/config.php</tt>
+and set the correct values for the DB name, user, password, host, etc.</p>
+<p>Browse to the directory <tt class="docutils literal">sql/</tt> and run the following commands (you will be
+asked by the password (<tt class="docutils literal">phpreport</tt>) interactively):</p>
+<pre class="literal-block">
+psql -h localhost -W -U phpreport phpreport &lt; schema.sql
+psql -h localhost -W -U phpreport phpreport &lt; uniqueConstraints.sql
+psql -h localhost -W -U phpreport phpreport &lt; otherConstraints.sql
+psql -h localhost -W -U phpreport phpreport &lt; initialData.sql
+psql -h localhost -W -U phpreport phpreport &lt; triggers.sql
+</pre>
+<p>Set the correct DB name, user and host if they are different.</p>
+</div>
+</div>
+<div class="section" id="step-4-try-the-application">
+<h1><a class="toc-backref" href="#id10">Step 4: Try the application</a></h1>
+<p>Use a browser to open the correct URL of your web server, and use the user name
+<tt class="docutils literal">admin</tt> and the password <tt class="docutils literal">admin</tt> for the first time. You will be able to
+create more users and
+change their passwords once you enter the application.</p>
+</div>
+<div class="section" id="step-5-remove-dangerous-files">
+<h1><a class="toc-backref" href="#id11">Step 5: remove dangerous files</a></h1>
+<p>Once the installation is complete and you have checked it is working, remove the
+<tt class="docutils literal">install/</tt> and <tt class="docutils literal">update/</tt> directories inside your PhpReport, to prevent other
+users from resetting your DB.</p>
+</div>
+<div class="section" id="step-6-last-configuration-bits">
+<h1><a class="toc-backref" href="#id12">Step 6: last configuration bits</a></h1>
+<p>You might have to modify some parameters in the file <cite>config/config.php</cite> to
+match your work domain. In particular, you might have to modify the default
+total number of holiday hours for a full-time worker. It is specified by the
+<cite>YEARLY_HOLIDAY_HOURS</cite> attribute, and you have to modify the following line to
+change it:</p>
+<pre class="literal-block">
+ * &#64;name YEARLY_HOLIDAY_HOURS
+ * &#64;global int holiday hours per year for an 8-hour working journey
+ */
+define ('YEARLY_HOLIDAY_HOURS', 184);
+</pre>
+<p>Remember to check the <a class="reference external" href="../user/overview.html#data-model-for-holiday-management">data model for holiday management</a> to know how it
+works and which value you should put there.</p>
+<p class="credits">This file is part of PhpReport 2.1 documentation.
+Generated on mié feb 27 17:45:01 CET 2013</p>
+</div>
+</div>
+</body>
+</html>
